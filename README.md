@@ -1,6 +1,11 @@
 # Integrating Docker + CodeLlama + Python for Code Analysis
 
-This repository shows how to leverage Code Llama, a cutting-edge AI model for code analysis, in conjunction with Docker to create an efficient and automated code review workflow
+This repository shows how to leverage Code Llama, a cutting-edge AI model for code analysis, in conjunction with Docker to create an efficient and automated code review workflow.
+
+
+## How it works?
+
+This project sets up an Ollama Docker container and integrates a "pre-commit" hook. Whenever someone modifies or commits a Python file, the hook triggers a code review using the codellama model. The review is then saved into a `review.md` file, allowing developers to compare their code against the review feedback. It's important to note that AI models can take varying amounts of time to process, depending on the computer's CPU and memory. In my experience, the review process typically takes between 2 to 5 minutes, which is comparable to the time a human might spend conducting a thorough review.
 
 # Getting Started
 
