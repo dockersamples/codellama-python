@@ -81,8 +81,31 @@ Go ahead and make changes to the python files.
 
 ## Step 6. Apply the changes
 
-Apply a commit message and wait for the review. It could take some minutes, the final result is a `review.md` with all suggestions.
+```
+git add .
+git commit -m "Test code review in pre-commit hook"
+````
 
+## Results
+
+Apply a commit message and wait for the review. You might see something like
+
+
+```
+pulling manifest
+pulling 3a43f93b78ec... 100% ▕████████████████▏ 3.8 GB
+pulling 8c17c2ebb0ea...   0% ▕                ▏    0 B
+pulling 590d74a5569b...   0% ▕                ▏    0 B
+pulling 2e0493f67d0c... 100% ▕████████████████▏   59 B
+pulling 7f6a57943a88... 100% ▕████████████████▏  120 B
+pulling 316526ac7323...   0% ▕                ▏    0 B
+verifying sha256 digest
+writing manifest
+removing any unused layers
+success
+```
+
+It might take some minutes, but the final result is a `review.md` with all suggestions.
 
 
 ## How can I customize the prompts provided to the CodeLLama model for generating suggestions?
