@@ -1,6 +1,6 @@
-# codellama-python
+# Integrating Docker + CodeLlama + Python for Code Analysis
 
-Integrating Docker + CodeLlama + Python to apply Code Review in the pre-commit GitHook
+This repository shows how to leverage Code Llama, a cutting-edge AI model for code analysis, in conjunction with Docker to create an efficient and automated code review workflow
 
 # Getting Started
 
