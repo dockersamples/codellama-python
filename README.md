@@ -26,9 +26,9 @@ sh start-ollama.sh
 ```
 
 
-## Step 3. Create the following file `.git/hooks/pre-commit`
+## Step 3. Create the pre-commit file
 
-Copy the content below and put it in the right directory:
+Create the following file `.git/hooks/pre-commit`
 
 ```
   #!/bin/sh
