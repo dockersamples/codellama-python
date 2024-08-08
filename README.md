@@ -1,6 +1,6 @@
 # Integrating Docker + CodeLlama + Python for Code Analysis
 
-This repository shows how to leverage Code Llama, a cutting-edge AI model for code analysis, in conjunction with Docker to create an efficient and automated code review workflow.
+This repository shows how to leverage [Code Llama](https://ollama.com/library/codellama), a cutting-edge AI model for code analysis, in conjunction with Docker to create an efficient and automated code review workflow.
 
 
 ## How it works?
