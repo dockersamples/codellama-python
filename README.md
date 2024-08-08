@@ -1,5 +1,6 @@
 # codellama-python
-This is a PoC about integrating docker + codellama + python in order to apply code review in the pre-commit git hook
+
+Integrating Docker + CodeLlama + Python to apply Code Review in the pre-commit GitHook
 
 # Getting Started
 
