@@ -1,10 +1,29 @@
 # codellama-python
 This is a PoC about integrating docker + codellama + python in order to apply code review in the pre-commit git hook
 
-# How it works
-- First you should serve `ollama` using docker `docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama` .
-- Clone this project and move inside it.
-- Create the following file `.git/hooks/pre-commit`
+# Getting Started
+
+## Step 1. Clone the repository
+
+```
+git clone https://github.com/dockersamples/codellama-python
+```
+
+
+
+## Step 2: Start the Ollama container
+
+Change directory to `codellama-python` and run the following command:
+
+```
+sh start-ollama.sh
+```
+
+
+## Step 3. Create the following file `.git/hooks/pre-commit`
+
+Copy the content below and put it in the right directory:
+
 ```
   #!/bin/sh
 
@@ -39,5 +58,28 @@ done
 echo "All Python files were applied the code review."
 exit 0
 ```
-- Add or modify the python files.
-- Apply a commit message and wait for the review. I could take some minutes, the final result is a review.md with all suggestions from codellama.
+
+The provided shell script automates the code review process by finding all modified Python files, cleaning the review.md file, and iterating through each file to generate suggestions using the Ollama model. The suggestions are then appended to the `review.md` file, providing developers with immediate feedback on their code changes.
+
+
+## Step 4. Proper permission to execute
+
+```
+chmod +x .git/hooks/pre-commit
+```
+
+## Step 5. Add or modify the python files
+
+Go ahead and make changes to the python files.
+
+
+## Step 6. Apply the changes
+
+Apply a commit message and wait for the review. It could take some minutes, the final result is a `review.md` with all suggestions.
+
+
+
+## How can I customize the prompts provided to the CodeLLama model for generating suggestions?
+
+To customize the prompts provided to the CodeLLama model for generating suggestions, you can modify the prompt variable within the shell script.
+
